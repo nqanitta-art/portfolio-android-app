@@ -7,6 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.Arrays;
 
 public class BlogActivity extends AppCompatActivity {
 
@@ -20,5 +24,10 @@ public class BlogActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        RecyclerView recycler = findViewById(R.id.blogRecycler);
+        recycler.setLayoutManager(new LinearLayoutManager(this));
+        recycler.setAdapter(new BlogAdapter(Arrays.asList(
+                "My first post", "Learning Git and GitHub", "Android basics")));
     }
 }
