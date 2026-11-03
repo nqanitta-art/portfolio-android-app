@@ -1,6 +1,8 @@
 package com.ucas.myhomework1git;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,9 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Button btnAbout = findViewById(R.id.btnAbout);
+        btnAbout.setOnClickListener(v ->
+                startActivity(new Intent(this, AboutActivity.class)));
     }
 }
