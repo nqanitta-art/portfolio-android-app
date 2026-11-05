@@ -10,3 +10,4 @@ Created to practice Git and GitHub for the Software Engineering course.
 
 ## Version 1.0
 - Main, About, Contact and Blog screens
+## Author
